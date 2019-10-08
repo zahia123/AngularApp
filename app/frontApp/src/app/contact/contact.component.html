@@ -1,0 +1,62 @@
+<main>
+        <mat-spinner  *ngIf="isLaoding"></mat-spinner>      
+<div class="contact-class">
+           
+<div class="container">
+        
+<div class="row">
+          
+<div class="google-maps"  align="center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.340897300385!2d-117.16574928508616!3d32.73013759368204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954b733f7b25d%3A0x39f045d3c46315d5!2s2365+1st+Ave%2C+San+Diego%2C+CA+92101!5e0!3m2!1sen!2sus!4v1563250613311!5m2!1sen!2sus" 
+    width="700" height="500"  allowfullscreen></iframe>
+<address>
+    <div> Lloyd street,
+     El cajon, California 92021</div>
+    <div> PhoneNumber:267 9617407</div>
+    <div>
+     EmailAddress:hcherfaoui64@gmail.com
+    </div>
+        
+</address>
+</div>
+    
+    
+   
+<div class="col-lg-12 col-md-12 col-sm-12">
+    Hours
+   
+</div>
+   
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <form [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label for="comment">Name:</label>
+                <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Name" id="usr" formControlName="firstName">
+            <p *ngIf="firstName.invalid && !firstName.pristine"class="alert alert-danger"  >Name is required.</p>
+
+        </div>
+              
+        <div class="input-group mb-3">
+            <label for="comment">Email:</label>
+            <input type="text" class="form-control" placeholder="Your Email" id="mail" formControlName="email">
+            <div class="input-group-append">
+                <span class="input-group-text">@example.com</span>
+            </div>
+            <div *ngIf="email.invalid && !email.pristine">
+                <p *ngIf="email.errors.email" class="alert alert-danger"  >Valid email is required.</p>
+             </div>
+        </div>
+        <div class="form-group">
+            <label for="comment">Message:</label>
+            <textarea class="form-control" rows="5" id="comment" formControlName="text"></textarea>
+                <p *ngIf="text.invalid && !text.pristine" class="alert alert-danger" >Message required.</p>
+        </div>
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</main>

@@ -1,0 +1,38 @@
+
+img{
+  
+    
+    height: auto;
+    margin: auto;
+    margin-top: 5px;
+   width: 200px;
+    height: 250px;
+    
+
+    
+
+}
+.gallry-class{
+  width: 100%;
+margin:auto;
+display: flex;
+  justify-content:space-between;
+
+
+
+}
+mat-spinner{
+  margin: auto
+}
+main{
+  position: -ms-page;
+  display: flex;
+  justify-content:space-between;
+ 
+}
+mat-card{
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+

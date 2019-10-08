@@ -1,0 +1,37 @@
+img{
+  
+    max-width: 500;
+    height: 500px;
+    
+
+}
+
+
+img{
+    width: 40px;
+    height:40px ;
+
+}
+.component-class{
+    background-image: url("/assets/images/logo.jpg");
+    background-repeat: repeat;
+    
+ width: 100%;
+    height: auto;
+      
+    
+}
+
+.fb-class{
+    margin-left: 15px;
+}
+nav{
+    position: -ms-page;
+    display: flex;
+    justify-content:space-between;
+}
+.Language-class{
+    float: right;
+    margin-right: 60px
+}
+

@@ -1,0 +1,38 @@
+
+.video-class{
+    margin: auto;
+    margin-top: 10px;
+    width: 30%;
+    height: auto;
+    
+    
+}
+main{
+     
+    display: flex;
+    flex-direction: column;
+   
+  
+    
+   
+    
+
+    
+    
+
+}
+mat-spinner{
+    margin: auto
+}
+img{
+  
+    width: 80%;
+    height: 400px;
+    margin: auto
+    
+}
+.paragraph{
+    color: white;
+    
+}
+

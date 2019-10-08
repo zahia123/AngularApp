@@ -1,0 +1,38 @@
+
+ 
+   
+    
+
+<main>
+    <mat-spinner  *ngIf="isLaoding"></mat-spinner>
+  <div class="container">
+  <div class="row">
+    <div  *ngFor="let post of posts" class="col-lg-4 col-md-6 " >
+        <mat-card >
+          <mat-card-header>
+             <mat-card-title>{{post.title}}</mat-card-title>
+          </mat-card-header>
+
+          <img  mat-card-image [src]="post.productImage" alt="Photo" class="img-thumbnail">
+
+          <mat-card-content>
+              <p>{{post.content | shorten}}</p>
+          </mat-card-content>
+
+          <mat-card-actions>
+              <button type="button" (click)="onClick(post.id)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                       Vue Profile
+              </button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+  </div>
+   <mat-paginator *ngIf="!isLaoding" [length]="postpages"
+         [pageSize]="pageSize"
+         (page)= "onchange($event)">
+   </mat-paginator>
+  </div>
+</main>
+         
+    
+      

@@ -1,0 +1,54 @@
+<main>
+       
+    <div align="right">
+    <button  mat-raised-button color="primary" (click)="onLogout()" >Logout</button>
+    
+    </div>       
+    <mat-card>
+        <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+            <mat-form-field MatFormFieldControl>
+                <input matInput type="text" ngModel name="title" required #Title="ngModel" placeholder="title">
+                <mat-error *ngIf="Title.invalid">Please porvide a title</mat-error>
+            </mat-form-field>
+
+            <div>
+                <button mat-stroked-button type="button" (click)="image.click()"  >Pick Image</button>
+                <input  type="file" (change)="onImageUploded($event.target.files)" #image >
+                <img [src]="imageUrl" style="width: 250px;height:200px">
+            </div>
+
+            <mat-form-field MatFormFieldControl>
+                <textarea matInput rows="10" name="content" ngModel required #Content="ngModel" placeholder="coments"></textarea>
+                <mat-error *ngIf="Content.invalid">Please provide some content</mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="accent" type="submit">save</button>
+        </form>
+       
+    </mat-card>
+        
+    <mat-accordion multi="true">
+        <mat-expansion-panel *ngFor="let post of posts">
+            <mat-expansion-panel-header>
+                {{post.title}}
+            </mat-expansion-panel-header> 
+        <div>
+            <img [src]="post.productImage" style="width: 250px;height:200px" alt="post.title">
+        
+        </div>
+            <p>{{post.content}}</p>
+        <mat-action-row>
+
+        <button mat-button color="primary">Edit</button>
+        <button mat-button color="warn" (click)="onDelete(post.id)">Delete</button>
+        
+        </mat-action-row>
+            </mat-expansion-panel> 
+        </mat-accordion>
+             
+        <mat-paginator [length]="postpages"
+                [pageSize]="pageSize"
+                (page)= "onchange($event)">
+        </mat-paginator>
+       
+</main>

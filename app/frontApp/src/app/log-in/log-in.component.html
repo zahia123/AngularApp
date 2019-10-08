@@ -1,0 +1,20 @@
+<mat-card>
+   <form (submit)="onlogin(logInForm)" #logInForm="ngForm">
+     <div>
+      <mat-form-field >
+        <input matInput type="email" ngModel name="email" required email #Email="ngModel" placeholder="email">
+        <mat-error *ngIf="Email.invalid">Please porvide an email</mat-error>
+      </mat-form-field>
+     </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput type="password" ngModel name="password" required #password="ngModel" placeholder="password">
+        <mat-error *ngIf="password.invalid">Please porvide a title</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <button mat-raised-button [disabled]="!logInForm.valid" color="accent"  [disabled]="!logInForm.valid" type="submit">save</button>
+  </form>
+</mat-card>
+    

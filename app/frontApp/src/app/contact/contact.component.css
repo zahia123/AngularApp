@@ -1,0 +1,44 @@
+iframe{
+   position: -ms-page;
+   
+}
+.container{
+    display: flex;
+    justify-content:left;
+    
+}
+.contact-class{
+margin-top: 80px;
+}
+mat-spinner{
+    margin: auto
+}
+main{
+    
+    display: flex;
+  justify-content:space-between;
+  
+  width: 100%;
+  height: auto;
+  
+}
+button{
+    margin-bottom: 20px
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    width:80%
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto
+}
+
